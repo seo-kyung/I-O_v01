@@ -1,5 +1,30 @@
 
+  $('.card-one').click(
+    function(){
+      $('.card-one').toggle();
+      $('.card-two').fadeToggle( "slow", "linear" );
+    }
+  )
+
+  $('.card-two').click(
+    function(){
+      $('.card-two').toggle();
+      $('.card-three').fadeToggle( "slow", "linear" );
+    }
+  )
+
+  $('.card-three').click(
+    function(){
+      $('.card-three').fadeToggle( "slow", "linear" );
+  
+    }
+  )
+
+
+
 if ( $(window).width() > 769){
+
+
         //using gsap.set() takes care of all vendor-prefixes
         gsap.set(".cardWrapper", {perspective:500});
         gsap.set(".card", {transformStyle:"preserve-3d"});
@@ -14,6 +39,9 @@ if ( $(window).width() > 769){
             gsap.to($(this).find(".card"), {duration: 1.2, rotationY:0, ease:Back.easeOut});  
         }
         );
+
+
+
 
 
         var modal = document.getElementById('myModal');
